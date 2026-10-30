@@ -1,0 +1,46 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# === Environment ===
+.env
+.venv/
+venv/
+env/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Data (runtime, not the original dataset) ===
+data/execution_logs.db
+data/*.db-journal
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Testing ===
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# === Streamlit ===
+.streamlit/secrets.toml
+
+# === Docker ===
+*.log
+
+# === Jupyter ===
+.ipynb_checkpoints/

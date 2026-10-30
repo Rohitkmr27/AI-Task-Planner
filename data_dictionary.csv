@@ -1,0 +1,8 @@
+column_name,data_type,sample_value_1,sample_value_2,sample_value_3,nullable,description_fill_in
+task_id,object,T022,T047,T096,No,"Unique identifier for each agent task (T001–T100). Groups multiple execution steps that belong to the same user request."
+step_id,int64,1,2,3,No,"Global sequential step counter (1–500) across all tasks. Indicates the chronological order in which steps were recorded across the entire dataset."
+tool_called,object,web_search,code_exec,calc,No,"Name of the tool invoked in this step. One of: web_search, code_exec, calc, api_call, file_read, email_draft."
+tool_success,int64,1,1,0,No,"Binary flag indicating whether the tool execution succeeded (1) or failed (0)."
+tokens_used,int64,2278,452,1675,No,"Number of LLM tokens consumed during this step (includes prompt and completion tokens). Range: 109–3999."
+duration_s,float64,17.43,19.44,4.29,No,"Wall-clock execution time for this step in seconds. Range: 0.18–29.89."
+retry_count,int64,0,0,0,No,"Number of retry attempts made before recording this step's outcome. Values: 0 (no retry), 1, or 2."

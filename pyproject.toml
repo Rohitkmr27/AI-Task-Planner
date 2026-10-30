@@ -1,0 +1,24 @@
+[project]
+name = "agentic-ai-task-planner"
+version = "0.1.0"
+description = "Agentic AI Task Planner — HCLTech Career Shaper Programme"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--tb=short -q"
+markers = [
+    "e2e: marks tests that call real Gemini API (deselect with '-m \"not e2e\"')",
+    "slow: marks tests that take >5 seconds",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["src/ui/*"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 70
